@@ -11,13 +11,16 @@ const Layout = (props) => {
 
     <div className="layout">
       <Navbar />
-      <Main />
+      <Main title ={props.title} background={props.background} 
+          backdrop={props.backdrop}>
+         {props.children} 
+      </Main>
       <Footer />
     </div>
 
   )
 
-
+     console.log(props.children)
   return (
     <>
       {renderLayout()}
